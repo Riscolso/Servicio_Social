@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Actividad 9</title>
+        <h1>Actividad 9</h1>
+    </head>
+    <body>
+
+        {% for table in v['tabla'] %}
+                    {{v['titulos'][loop.index]}}
+                    {{ table|safe }}
+        {% endfor %}
+        <br/>
+        <br/>
+        <h3>Número de preguntas correctas: {{ v['correctas']}}</h3>
+        <h3>Número de preguntas fallidas: {{ v['fallidas']}}</h3>
+    </body>
+</html>

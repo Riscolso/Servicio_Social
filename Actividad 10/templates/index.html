@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+        <meta charset="UTF-8">
+        <title>Actividad 10</title>
+        <h1>Actividad 10</h1>
+    </head>
+    <body>
+
+        {% for table in v['tabla'] %}
+                    {{v['titulos'][loop.index]}}
+                    {{ table|safe }}
+        {% endfor %}
+        <br/>
+        <br/>
+        <h3>Número de preguntas correctas: {{ v['correctas']}}</h3>
+        <h3>Número de preguntas fallidas: {{ v['fallidas']}}</h3>
+
+        <br/><br/>
+        <h2 text-align = 'center'> Para ver graficas de esta información. Haz click <a href="{{url_for('graficas')}}">Aquí</a> </h2>
+
+    </body>
+</html>
