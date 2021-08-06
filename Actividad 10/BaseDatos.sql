@@ -46,7 +46,7 @@ INSERT INTO Pregunta values(2, '¿Qué es Python?',
 INSERT INTO Pregunta values(3, '¿Qué es Pandas?',
   'OP1-Es un lenguaje de programación interpretado
    OP2-Es una biblioteca de software escrita como extensión de NumPy
-   OP3-OP1-Es una librería de JavaScript declarativa para interfaces web',
+   OP3-Es una librería de JavaScript declarativa para interfaces web',
   0,
   '00:20',
   1,

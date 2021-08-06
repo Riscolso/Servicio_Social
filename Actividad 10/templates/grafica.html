@@ -3,8 +3,8 @@
     <head>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
         <meta charset="UTF-8">
-        <title>Actividad 10</title>
-        <h1>Actividad 10</h1>
+        <title>Actividad 3</title>
+        <h1>Actividad 3</h1>
     </head>
     <body>
         <table class="default">
@@ -29,6 +29,7 @@
             {% endfor %}],
             datasets : [{
                 label: "{{ graficas['tiempo']['legend'] }}",
+                type: 'line',
                 fill: false,
                 smooth:true,
                 lineTension: 0.1,
@@ -40,16 +41,10 @@
                 {{item}},
                 {% endfor %}],
                 spanGaps: false
-            }]
-        }
-
-        // Definir la gráfica de Intentos
-        var grafInten = {
-            labels : [{% for item in graficas['intento']['labels']  %}
-            "{{item}}",
-            {% endfor %}],
-            datasets : [{
+            },
+            {
                 label: "{{ graficas['intento']['legend'] }}",
+                type: 'bar',
                 fill: false,
                 smooth:true,
                 lineTension: 0.1,
@@ -61,50 +56,34 @@
                 {{item}},
                 {% endfor %}],
                 spanGaps: false
-            }]
-        }
-
-        // Definir la gráfica de complejidad
-        var grafComp = {
-            labels : [{% for item in graficas['comple']['labels']  %}
-            "{{item}}",
-            {% endfor %}],
-            datasets : [{
+            },
+            {
                 label: "{{ graficas['comple']['legend'] }}",
-                fill: true,
+                fill: false,
+                type: 'line',
                 smooth:true,
                 lineTension: 0.1,
-                backgroundColor: "rgb(50,50,150)",
-                borderColor: "rgb(50,50,150)",
+                backgroundColor: "rgb(100,25,25)",
+                borderColor: "rgb(100,0,0)",
                 pointRadius: 1,
                 pointHitRadius: 10,
                 data : [{% for item in graficas['comple']['values'] %}
                 {{item}},
                 {% endfor %}],
                 spanGaps: false
-            }]
+            }
+            
+        ]
         }
         
         // Obtener los canvas de HTML
         var ctx = document.getElementById("myChart").getContext("2d");
-        var gI = document.getElementById("grafInten").getContext("2d");
-        var gC = document.getElementById("grafComp").getContext("2d");
         
         // Crear las gráfica en el canvas
         //Tiempo
         var myChart = new Chart(ctx, {
-            type: 'line',
-            data: chartData,
-        });
-        //Intentos
-        var grafInten = new Chart(gI, {
             type: 'bar',
-            data: grafInten,
-        });
-        //Complejidad
-        var grafComp = new Chart(gC, {
-            type: 'line',
-            data: grafComp,
+            data: chartData,
         });
     </script>
     </body>

@@ -105,7 +105,7 @@ def graficas():
     #para que los mayores valores no se vayan hasta arriba
     graficas['intento']['values'].append(0)
     
-    #Gráfica de Complejidad
+    #Gráfica de Opciones
     graficas['comple'] = {}
     graficas['comple']['legend'] = 'Complejidad'
     #Las etiquetas (Horizontales) de la gráfica
