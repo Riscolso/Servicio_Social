@@ -141,3 +141,7 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+
+# Misceláneos
+/Actividad 13
+Actividad 14/geckodriver.exe
