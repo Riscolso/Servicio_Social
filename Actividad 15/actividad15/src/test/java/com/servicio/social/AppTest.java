@@ -34,7 +34,7 @@ public class AppTest
         //Inicializar el esperador
         WebDriverWait wait = new WebDriverWait(driver,30);
         //Obtener el input de correo y llenarlo con usuario
-        driver.findElement(By.id("i0116")).sendKeys("rriscolso@hotmail.com");
+        driver.findElement(By.id("i0116")).sendKeys("EMAIL@hotmail.com");
         //Obtener y presionar el botón "Siguiente"
         driver.findElement(By.xpath("//*[@id=\"idSIButton9\"]")).click();
         //Esperar hasta que aparezca el input de contraseña
