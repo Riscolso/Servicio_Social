@@ -146,3 +146,5 @@ nbdist/
 /Actividad 13
 geckodriver.exe
 .docx
+node_modules
+package-lock.json
