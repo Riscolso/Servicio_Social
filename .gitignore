@@ -148,3 +148,6 @@ geckodriver.exe
 .docx
 node_modules
 package-lock.json
+\.classpath
+\.settings
+Actividad 17/actividad17/Capturas/prueba.png
