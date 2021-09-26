@@ -6,7 +6,7 @@ from selenium.webdriver.support.expected_conditions import presence_of_element_l
 import unittest
 from typing import List
 
-driver = Firefox(executable_path='geckodriver')
+driver = Firefox(executable_path='actividad 14/geckodriver')
 TIPOS = {
     1 : ['4', '2', '1', '0.1'],
     2 : ['4', '2', '1.1', '3'],
