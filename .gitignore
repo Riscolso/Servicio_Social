@@ -145,6 +145,7 @@ nbdist/
 # Misceláneos
 /Actividad 13
 /Actividad 20
+/Actividad 21
 geckodriver.exe
 .docx
 node_modules
